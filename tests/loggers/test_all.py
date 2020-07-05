@@ -94,7 +94,7 @@ def test_loggers_pickle(tmpdir, monkeypatch, logger_class):
     logger = logger_class(**logger_args)
 
     # test pickling loggers
-    pickle.dumps(logger)
+    pickle.dumps(logger.experiment)
 
     trainer = Trainer(
         max_epochs=1,
